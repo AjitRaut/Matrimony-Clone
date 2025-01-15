@@ -10,7 +10,6 @@ const AllMatches = () => {
     { id: 1, name: 'Prajakta', age: 21, height: "5'0" },
     { id: 2, name: 'Later', age: 21, height: "5'6" },
     { id: 3, name: 'Aarti Jadh', age: 20, height: "5'2" },
-    // Add more matches as needed
   ];
 
   return (
