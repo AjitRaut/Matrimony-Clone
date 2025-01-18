@@ -44,7 +44,7 @@ const ProfileActionsCard = () => {
               color="#4CAF50"
             />
           </View>
-          <Text style={styles.mainText}>Download & share your biodata</Text>
+          <Text style={styles.biodataText}>Download & share your biodata</Text>
         </View>
         <TouchableOpacity
           style={[styles.downloadButton]}
@@ -63,26 +63,31 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     paddingHorizontal: 7,
-    paddingVertical: 8,
+    paddingVertical: 2,
   },
   section: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingVertical: 12,
+    paddingVertical: 5,
     paddingHorizontal: 12,
     marginTop: 2,
+    marginBottom: 10,
   },
   photoSection: {
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: "#eee",
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    marginBottom: 12,
   },
   biodataSection: {
     backgroundColor: "#FFF8E1",
-    marginTop: 8,
     borderRadius: 8,
-    padding: 12,
+    width: "90%",
+    margin: "auto",
+    borderWidth: 1,
+    borderColor: "#eee",
   },
   leftContent: {
     flexDirection: "row",
@@ -102,12 +107,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   mainText: {
-    fontSize: 14,
+    fontSize: 13,
+    fontWeight: "500",
+  },
+  biodataText: {
+    fontSize: 12,
     color: "#333",
-    flexShrink: 1,
+    fontWeight: "400",
   },
   button: {
-    paddingHorizontal: 15,
+    paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 20,
     borderWidth: 1,
@@ -115,7 +124,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#E65100",
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "500",
   },
   downloadButton: {

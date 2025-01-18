@@ -1,5 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+const girlprofile =  require("../../assets/images/girl-profile.png");;
 
 interface MatchCardProps {
   name: string;
@@ -12,10 +13,7 @@ const MatchCard: React.FC<MatchCardProps> = ({ name, age, height }) => {
   return (
     <TouchableOpacity style={styles.matchCard}>
       <View style={styles.imageContainer}>
-        <Image
-         source={{uri:"https://imgs.bharatmatrimony.com/webapp-assets/revamp-images/female-avatar-img-new.svg"} }
-          style={styles.profileImage}
-        />
+        <Image source={girlprofile} style={styles.profileImage} />
       </View>
       <Text style={styles.nameText}>{name}</Text>
       <Text style={styles.detailsText}>

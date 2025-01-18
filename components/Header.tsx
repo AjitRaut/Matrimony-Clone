@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
+import proiflle from "./../assets/images/profile-banner.png";
 
 const ProfileHeader = () => {
   return (
@@ -25,13 +26,8 @@ const ProfileHeader = () => {
             <TouchableOpacity style={styles.cameraBtn}>
               <MaterialIcons name="photo-camera" size={15} color="#000" />
             </TouchableOpacity>
-            <View style={styles.avatar} >
-              <Image
-                source={{
-                  uri: "https://imgs.bharatmatrimony.com/webapp-assets/revamp-images/male-avatar-img-new.svg",
-                }}
-                style={styles.image}
-              />
+            <View style={styles.avatar}>
+              <Image source={proiflle} style={styles.image} />
             </View>
           </View>
           <View style={styles.userInfoContainer}>
@@ -68,7 +64,7 @@ const styles = StyleSheet.create({
     zIndex: 100,
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
-    boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.3)", 
+    boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.3)",
   },
   membershipContainer: {
     paddingTop: 25,
