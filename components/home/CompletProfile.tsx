@@ -20,12 +20,15 @@ interface TabData {
 }
 
 const CompletProfile: React.FC<TabContentProps> = () => {
-  const [activeTab, setActiveTab] = useState<number>(0); // Active tab index
+  const [activeTab, setActiveTab] = useState<number>(0);
 
-  // Tab Titles
-  const tabs: string[] = ["Add Photo", "Add Horoscope", "Family Details", "Interest"];
+  const tabs: string[] = [
+    "Add Photo",
+    "Add Horoscope",
+    "Family Details",
+    "Interest",
+  ];
 
-  // Tab Content
   const content: TabData[] = [
     {
       title: "Add Photo",
@@ -51,14 +54,12 @@ const CompletProfile: React.FC<TabContentProps> = () => {
     },
   ];
 
-  // Function to change active tab on press
   const handleTabPress = (index: number): void => {
     setActiveTab(index);
   };
 
   return (
     <View style={styles.container}>
-      {/* Tabs Section */}
       <FlatList
         horizontal
         data={tabs}
@@ -85,7 +86,6 @@ const CompletProfile: React.FC<TabContentProps> = () => {
         )}
       />
 
-      {/* Swipeable Views */}
       <Swiper
         index={activeTab}
         onIndexChanged={(index: number) => setActiveTab(index)}

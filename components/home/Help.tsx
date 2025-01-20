@@ -1,53 +1,43 @@
-import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const Help = () => {
   return (
-    <TouchableOpacity style={styles.container}>
-      <View style={styles.iconContainer}>
-        <Text style={styles.questionMark}>?</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          Need Help? Reach out to us with{"\n"}your queries!
-        </Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.card}>
+      <MaterialIcons name="help-outline" size={24} color="#43A047" style={styles.icon} />
+      <Text style={styles.text}>
+        <Text style={styles.boldText}>Need Help? </Text>
+        Reach out to us with your queries!
+      </Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#999999",
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 10,
-    padding: 10,
-    marginHorizontal: 26,
-    marginVertical: 10,
-    borderRadius: 12,
+  card: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F5F5F5',
+    borderRadius: 8,
+    padding: 12,
+    marginVertical: 8,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
+    marginHorizontal: 16,
   },
-  iconContainer: {
-    width: 50,
-    height: 50,
-    borderRadius: 10,
-    backgroundColor: "#40C1A0",
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 20,
-  },
-  questionMark: {
-    color: "#FFFFFF",
-    fontSize: 28,
-    fontWeight: "bold",
-  },
-  textContainer: {
-    flex: 1,
+  icon: {
+    marginRight: 12,
   },
   text: {
-    fontSize: 15,
-    color: "#000000",
-    lineHeight: 24,
+    fontSize: 14,
+    color: '#333',
+    flex: 1,
+  },
+  boldText: {
+    fontWeight: 'bold',
   },
 });
 
