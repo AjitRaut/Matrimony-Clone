@@ -1,24 +1,13 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
-import proiflle from "./../assets/images/profile-banner.png";
+import RegularPrime from "./RegularPrime";
+const proifle = require("./../assets/images/profile-banner.png");
 
 const ProfileHeader = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.membershipContainer}>
-        <View style={styles.toggleContainer}>
-          <TouchableOpacity style={styles.regularButton}>
-            <Text style={styles.regularText}>Regular</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.primeButton}>
-            <View style={styles.primeContainer}>
-              <View style={styles.redDot} />
-              <Text style={styles.primeText}>PRIME</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-      </View>
+      <RegularPrime />
 
       <View style={styles.profileSection}>
         <View style={styles.profileLeft}>
@@ -27,7 +16,7 @@ const ProfileHeader = () => {
               <MaterialIcons name="photo-camera" size={15} color="#000" />
             </TouchableOpacity>
             <View style={styles.avatar}>
-              <Image source={proiflle} style={styles.image} />
+              <Image source={proifle} style={styles.image} />
             </View>
           </View>
           <View style={styles.userInfoContainer}>
@@ -65,49 +54,6 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
     boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.3)",
-  },
-  membershipContainer: {
-    paddingTop: 25,
-    alignItems: "center",
-  },
-  toggleContainer: {
-    flexDirection: "row",
-    backgroundColor: "#f8f8f8",
-    borderRadius: 25,
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
-  },
-  regularButton: {
-    backgroundColor: "#ffe7d4",
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    borderRadius: 20,
-  },
-  primeButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    borderRadius: 20,
-  },
-  regularText: {
-    color: "#FF6B00",
-    fontWeight: "500",
-  },
-  primeContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  redDot: {
-    width: 5,
-    height: 5,
-    backgroundColor: "#FF0000",
-    borderRadius: "100%",
-    position: "absolute",
-    top: 1,
-    right: -7,
-  },
-  primeText: {
-    color: "#000000",
-    fontWeight: "500",
   },
   profileSection: {
     flexDirection: "row",
