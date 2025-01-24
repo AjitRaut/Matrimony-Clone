@@ -8,7 +8,6 @@ interface MatchCardProps {
   height: string | number;
 }
 
-// Functional Component with Props
 const MatchCard: React.FC<MatchCardProps> = ({ name, age, height }) => {
   return (
     <TouchableOpacity style={styles.matchCard}>

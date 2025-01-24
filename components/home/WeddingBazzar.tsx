@@ -85,7 +85,6 @@ const WeddingBazaar: React.FC = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.exploreButton}>
           <Text style={styles.exploreButtonText}>Explore now</Text>
-          <Text style={styles.arrowText}>{">"}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -140,9 +139,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#FF4B78",
     paddingVertical: 15,
     paddingHorizontal: 30,
-    borderRadius: 30,
+    borderRadius: 20,
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "center",
   },
   exploreButtonText: {
@@ -151,11 +149,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginRight: 8,
   },
-  arrowText: {
-    color: "white",
-    fontSize: 20,
-    fontWeight: "600",
-  },
+ 
 });
 
 export default WeddingBazaar;

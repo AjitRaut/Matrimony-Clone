@@ -14,7 +14,6 @@ const AllMatches = () => {
 
   return (
     <View style={styles.container}>
-      {/* Header Section */}
       <View style={styles.header}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>All matches</Text>
@@ -26,12 +25,10 @@ const AllMatches = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Subtitle */}
       <Text style={styles.subtitle}>
         Members who match your partner preferences
       </Text>
 
-      {/* Matches Grid */}
       <ScrollView 
         horizontal 
         showsHorizontalScrollIndicator={false}

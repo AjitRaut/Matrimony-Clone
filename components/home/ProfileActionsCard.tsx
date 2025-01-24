@@ -4,12 +4,10 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const ProfileActionsCard = () => {
   const handleAddPhoto = () => {
-    // Implement photo upload logic
     console.log("Add photo pressed");
   };
 
   const handleDownloadBiodata = () => {
-    // Implement biodata download logic
     console.log("Download biodata pressed");
   };
 
@@ -34,7 +32,6 @@ const ProfileActionsCard = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Biodata Section */}
       <View style={[styles.section, styles.biodataSection]}>
         <View style={styles.leftContent}>
           <View style={styles.iconContainer}>
