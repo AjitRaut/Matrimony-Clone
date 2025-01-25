@@ -91,7 +91,7 @@ const cardData = [
       },
     ],
     topImage: require("../../assets/images/services/MatchAstroLogo.png"),
-    bottomImage: require("../../assets/images/services/elite-matrimony (2).png"),
+    bottomImage: require("../../assets/images/services/matchastro (1).png"),
   },
   {
     id: "5",
