@@ -2,28 +2,25 @@ import { Tabs } from "expo-router";
 import React from "react";
 import { Platform } from "react-native";
 import { HapticTab } from "@/components/HapticTab";
-import { useColorScheme } from "@/hooks/useColorScheme";
 import Icon from "react-native-vector-icons/FontAwesome";
 import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#32CD32", 
-        tabBarInactiveTintColor: "#000000", 
+        tabBarActiveTintColor: "#046A4A", 
+        tabBarInactiveTintColor: "#5A5A5A", 
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
-          backgroundColor: "#FFFFFF", 
-          borderTopWidth: 0, 
-          elevation: Platform.OS === "android" ? 4 : 0, 
+          backgroundColor: "#FFFFFF",
+          borderTopWidth: 0,
+          elevation: Platform.OS === "android" ? 4 : 0,
           shadowColor: "#000",
-          shadowOpacity: 0.1, 
-          shadowOffset: { width: 0, height: 2 }, 
-          shadowRadius: 4, 
+          shadowOpacity: 0.1,
+          shadowOffset: { width: 0, height: 2 },
+          shadowRadius: 4,
         },
       }}
     >
@@ -32,31 +29,21 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <Icon
-              name="home"
-              size={28}
-              color={focused ? "#32CD32" : color} 
-            />
+            <Icon name="home" size={28} color={focused ? "#046A4A" : color} />
           ),
         }}
       />
 
-      {/* Matches Tab */}
       <Tabs.Screen
         name="matches"
         options={{
           title: "Matches",
           tabBarIcon: ({ color, focused }) => (
-            <Icon
-              name="user"
-              size={28}
-              color={focused ? "#32CD32" : color} // Green on hover
-            />
+            <Icon name="user" size={28} color={focused ? "#046A4A" : color} />
           ),
         }}
       />
 
-      {/* Mailbox Tab */}
       <Tabs.Screen
         name="mailbox"
         options={{
@@ -65,13 +52,12 @@ export default function TabLayout() {
             <Icon
               name="envelope"
               size={28}
-              color={focused ? "#32CD32" : color} // Green on hover
+              color={focused ? "#046A4A" : color}
             />
           ),
         }}
       />
 
-      {/* Messages Tab */}
       <Tabs.Screen
         name="messages"
         options={{
@@ -80,13 +66,12 @@ export default function TabLayout() {
             <MaterialIcon
               name="message"
               size={28}
-              color={focused ? "#32CD32" : color} // Green on hover
+              color={focused ? "#046A4A" : color}
             />
           ),
         }}
       />
 
-      {/* Search Tab */}
       <Tabs.Screen
         name="search"
         options={{
@@ -95,13 +80,12 @@ export default function TabLayout() {
             <MaterialIcon
               name="search"
               size={28}
-              color={focused ? "#32CD32" : color} // Green on hover
+              color={focused ? "#046A4A" : color}
             />
           ),
         }}
       />
 
-      {/* Services Tab */}
       <Tabs.Screen
         name="services"
         options={{
@@ -110,7 +94,7 @@ export default function TabLayout() {
             <MaterialIcon
               name="build"
               size={28}
-              color={focused ? "#32CD32" : color} // Green on hover
+              color={focused ? "#046A4A" : color}
             />
           ),
         }}

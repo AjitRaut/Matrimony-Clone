@@ -7,7 +7,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const Matches = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <MatchMaking/> */}
       <MainComponent/>
     </SafeAreaView>
   );

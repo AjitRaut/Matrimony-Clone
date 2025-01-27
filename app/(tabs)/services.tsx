@@ -1,15 +1,9 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import ServicesScreen from "@/components/services/ServiceScreen";
-import WeddingLoanCard from "@/components/services/WddingLoanCard";
-import WeddingGiftBox from "@/components/services/WeddingGiftBox";
-import WeddingBazaarCard from "@/components/services/WddingBazaarCard";
-import MandapCard from "@/components/services/MandapCard";
 import ServiceHeader from "@/components/services/ServiceHeader";
-import EliteMatrimonyCard from "@/components/services/EliteMatrimonyCard";
-import CommunityCard from "@/components/services/CommunityCard";
-import AssistedCard from "@/components/services/AssistedCard";
-import MatchAstroCard from "@/components/services/MatchAstroCard";
+import OurServices from "@/components/services/OurServices";
+import WantToMore from "@/components/services/WantToMore";
 
 const Services = () => {
   return (
@@ -21,14 +15,8 @@ const Services = () => {
         showsVerticalScrollIndicator={false}
       >
         <ServicesScreen />
-        <CommunityCard />
-        <AssistedCard />
-        <EliteMatrimonyCard />
-        <MatchAstroCard />
-        <WeddingBazaarCard />
-        <MandapCard />
-        <WeddingLoanCard />
-        <WeddingGiftBox />
+        <WantToMore />
+        <OurServices />
       </ScrollView>
     </SafeAreaView>
   );
@@ -39,7 +27,7 @@ export default Services;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f8f7f8",
     paddingTop: 10,
   },
   scrollView: {

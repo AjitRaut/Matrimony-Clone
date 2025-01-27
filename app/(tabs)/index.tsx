@@ -34,8 +34,10 @@ const index = () => {
         <SuccessStoryCard />
         <AssistedService />
         <TalkToAstrologer />
-        <WeddingBazaar />
-        <Help />
+        <View style={{ backgroundColor: "#fff" }}>
+          <WeddingBazaar />
+          <Help />
+        </View>
       </ScrollView>
     </View>
   );
