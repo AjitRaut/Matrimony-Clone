@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#f6f6f6',
     borderRadius: 8,
     padding: 12,
     marginVertical: 8,
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
     marginHorizontal: 16,
+    marginTop: 10,
   },
   icon: {
     marginRight: 12,

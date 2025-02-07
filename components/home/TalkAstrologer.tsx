@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
   },
   newFeatureBadge: {
     position: 'absolute',
-    top: -15,
-    left: -5,
+    top: 3,
+    left: 1,
     backgroundColor: '#FF0000',
     paddingHorizontal: 15,
     paddingVertical: 8,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     marginTop: 30,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   priceContainer: {
     flexDirection: 'row',
@@ -148,8 +148,8 @@ const styles = StyleSheet.create({
   bookNowButton: {
     backgroundColor: '#DC143C',
     borderRadius: 25,
-    paddingVertical: 12,
-    paddingHorizontal: 30,
+    paddingVertical: 10,
+    paddingHorizontal: 40,
     alignSelf: 'flex-start',
     marginBottom: 20,
   },

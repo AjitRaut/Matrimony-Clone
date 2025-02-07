@@ -14,14 +14,17 @@ type CardProps = {
 
 const ServicesCard: React.FC<CardProps> = ({ item }) => (
   <View style={styles.card}>
+    <View style={styles.topImageContainer}>
     <Image source={item.topImage} style={styles.topImage} />
     {item.title && <Text style={styles.title}>{item.title}</Text>}
+    </View>
+   
     <Text style={styles.description}>{item.description}</Text>
     <View style={styles.dottedLine} />
     <View style={styles.pointsContainer}>
       {item.points.map((point, index) => (
         <View key={index} style={styles.point}>
-          {point.icon}
+         <View style={styles.iconContainer}>{point.icon}</View>
           <Text style={styles.pointText}>{point.text}</Text>
         </View>
       ))}
@@ -37,7 +40,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#fff",
     borderRadius: 10,
-    padding: 16,
+    padding: 14,
     marginBottom: 16,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -45,23 +48,30 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
     position: "relative",
+    overflow: "hidden",
+  },
+  topImageContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center", 
+    marginBottom: 8,
+    width: 100,
+    height: 50,
   },
   topImage: {
-    width: "30%",
-    marginLeft: -5,
-    height: 50,
+    width: "100%",
     resizeMode: "contain",
-    alignSelf: "flex-start",
   },
   title: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: "bold",
-    marginVertical: 8,
+    marginLeft: 4, 
+    color: "#333",
   },
   description: {
     fontSize: 14,
     color: "#555",
-    marginBottom: 8,
+    marginBottom: 4,
   },
   dottedLine: {
     borderWidth: 1,
@@ -72,10 +82,14 @@ const styles = StyleSheet.create({
   pointsContainer: {
     marginBottom: 16,
   },
+  iconContainer: {
+    width: 20,
+  },
   point: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 4,
+    gap: 2,
+    marginBottom: 8,
   },
   pointText: {
     marginLeft: 8,
@@ -101,8 +115,8 @@ const styles = StyleSheet.create({
     height: 60,
     resizeMode: "contain",
     position: "absolute",
-    bottom: 10,
-    right: 10,
+    bottom: -5,
+    right: -10,
   },
 });
 

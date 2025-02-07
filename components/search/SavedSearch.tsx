@@ -19,21 +19,19 @@ export default SavedSearch;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
-    padding: 20,
+    padding: 15,
   },
   infoText: {
-    fontSize: 16,
+    fontSize: 15,
     color: "#000",
-    textAlign: "center",
     marginBottom: 20,
   },
   button: {
     backgroundColor: "#f47216",
-    paddingVertical: 12,
-    paddingHorizontal: 25,
+    paddingVertical: 7,
+    paddingHorizontal: 15,
     borderRadius: 35,
   },
   buttonText: {

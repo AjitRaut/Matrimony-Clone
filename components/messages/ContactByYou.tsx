@@ -1,11 +1,17 @@
-// ContactedByYou.tsx
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 const ContactedByYou = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <Image
+          source={{
+            uri: "https://imgs.bharatmatrimony.com/webapp-assets/revamp-images/mailbox/chat-converstion.png",
+          }}
+          style={styles.image}
+          resizeMode="contain"
+        />
         <Text style={styles.title}>Matches you tried contacting</Text>
       </View>
       <View style={styles.emptyState}>
@@ -26,21 +32,27 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFF",
+    justifyContent: "center",
+    alignItems: "center",
   },
   header: {
+    alignItems: "center", 
     padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "#E8E8E8",
+  },
+  image: {
+    width: 200,
+    height: 200,
+    marginBottom: 20,
   },
   title: {
     fontSize: 16,
     fontWeight: "500",
     color: "#333",
+    textAlign: "center", // Centers the text
   },
   emptyState: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "center", // Centers vertically
+    alignItems: "center", // Centers horizontally
     paddingHorizontal: 24,
   },
   emptyTitle: {

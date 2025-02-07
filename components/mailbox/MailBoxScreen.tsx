@@ -1,19 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import ByCriteria from "./ByCriteria";
-import ByProfileID from "./ByProfileID";
-import SavedSearch from "./SavedSearch";
-import SearchMatches from "./SearchMatches";
+import Received from "./Received";
+import Sent from "./Sent";
+import Requests from "./Requests";
+import Calls from "./Calls";
+import InterestsScreen from "./Received";
+import RegularPrime from "../RegularPrime";
 
 const Tab = createMaterialTopTabNavigator();
 
-const SearchScreen: React.FC = () => {
+const MailBoxScreen: React.FC = () => {
   return (
     <>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Search</Text>
-      </View>
+      <RegularPrime/>
       <Tab.Navigator
         screenOptions={{
             tabBarActiveTintColor: "#000",
@@ -31,15 +31,16 @@ const SearchScreen: React.FC = () => {
             },
         }}
       >
-        <Tab.Screen name="By Criteria" component={ByCriteria} />
-        <Tab.Screen name="By Profile ID" component={ByProfileID} />
-        <Tab.Screen name="Saved Search" component={SavedSearch} />
+        <Tab.Screen name="Received" component={InterestsScreen} />
+        <Tab.Screen name="Sent" component={Sent} />
+        <Tab.Screen name="Requests" component={Requests} />
+        <Tab.Screen name="Calls" component={Calls} />
       </Tab.Navigator>
     </>
   );
 };
 
-export default SearchScreen;
+export default MailBoxScreen;
 
 const styles = StyleSheet.create({
     header: {

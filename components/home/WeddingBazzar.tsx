@@ -134,12 +134,13 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     padding: 20,
+    width : "50%",
   },
   exploreButton: {
     backgroundColor: "#FF4B78",
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 10,
     flexDirection: "row",
     justifyContent: "center",
   },

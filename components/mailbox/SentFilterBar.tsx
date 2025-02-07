@@ -1,29 +1,26 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import AssistedService from './AssistedService';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const ReceivedScreen = () => {
+const SentFilterbar = () => {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>Incoming messages from paid members</Text>
+        <Text style={styles.headerText}>Incoming messages sent by you</Text>
         <TouchableOpacity style={styles.filterButton}>
           <MaterialIcons name="filter-list" size={20} color="#666" />
           <Text style={styles.filterText}>Filter</Text>
         </TouchableOpacity>
       </View>
-      <AssistedService />
     </View>
   );
 };
 
-export default ReceivedScreen;
+export default SentFilterbar;
 
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#f5f5f5',
   },
   headerContainer: {

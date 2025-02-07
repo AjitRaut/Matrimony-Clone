@@ -1,143 +1,170 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
+import SearchMatches from "./SearchMatches";
 
-const SearchCriteria = () => {
+const SearchCriteria: React.FC = () => {
   return (
     <ScrollView style={styles.container}>
-      {/* Header */}
-      <Text style={styles.header}>Search profiles using the below criteria</Text>
+      {/* Heading */}
+      <Text style={styles.heading}>
+        Search profiles using the below criteria
+      </Text>
 
-      {/* Basic Details Section */}
+      {/* Section: Basic Details */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Basic Details</Text>
-
-        <View style={styles.row}>
+        <TouchableOpacity style={styles.row}>
           <Text style={styles.label}>Age</Text>
-          <Text style={styles.value}>18 Yrs - 21 Yrs</Text>
-        </View>
-
-        <View style={styles.row}>
+          <View style={styles.rowRight}>
+            <Text style={styles.value}>18 Yrs - 21 Yrs</Text>
+            <MaterialIcons name="keyboard-arrow-right" size={24} color="#000" />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.row}>
           <Text style={styles.label}>Height</Text>
-          <Text style={styles.value}>4'7" - 5'7"</Text>
-        </View>
-
-        <View style={styles.row}>
+          <View style={styles.rowRight}>
+            <Text style={styles.value}>4'7" - 5'7"</Text>
+            <MaterialIcons name="keyboard-arrow-right" size={24} color="#000" />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.row}>
           <Text style={styles.label}>Profile created by</Text>
-          <Text style={styles.value}>Any</Text>
-        </View>
-
+          <View style={styles.rowRight}>
+            <Text style={styles.value}>Any</Text>
+            <MaterialIcons name="keyboard-arrow-right" size={24} color="#000" />
+          </View>
+        </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.viewMore}>View more</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Religious Details Section */}
-      <View style={styles.section}>
+      {/* Section: Religious Details */}
+      <View style={[styles.section ,{ marginTop: 10 }]}>
         <Text style={styles.sectionTitle}>Religious Details</Text>
-
-        <View style={styles.row}>
+        <TouchableOpacity style={styles.row}>
           <Text style={styles.label}>Religion</Text>
-          <Text style={styles.value}>Hindu</Text>
-        </View>
-
-        <View style={styles.row}>
+          <View style={styles.rowRight}>
+            <Text style={styles.value}>Hindu</Text>
+            <MaterialIcons name="keyboard-arrow-right" size={24} color="#000" />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.row}>
           <Text style={styles.label}>Caste</Text>
-          <Text style={styles.value}>Nhavi, Bajantri, Nai...</Text>
-        </View>
-
-        <TouchableOpacity style={styles.lockedRow}>
-          <Text style={styles.lockedText}>To access these premium filters, </Text>
-          <Text style={styles.upgrade}>Upgrade Now</Text>
+          <View style={styles.rowRight}>
+            <Text style={styles.valueWithLink}>Xyz, Bajantri, Nai...</Text>
+            <Text style={styles.readMore}>Read more</Text>
+            <MaterialIcons name="keyboard-arrow-right" size={24} color="#000" />
+          </View>
         </TouchableOpacity>
       </View>
 
-      {/* Matches Section */}
-      <Text style={styles.matchesText}>12 matches based on your preferences</Text>
+      <View style={styles.lockedSection}>
+        <MaterialIcons name="lock-outline" size={24} color="#f47216" />
+        <Text style={styles.lockedText}>
+          To access these premium filters,{" "}
+          <Text style={styles.upgradeLink}>Upgrade Now</Text>
+        </Text>
+      </View>
+      <SearchMatches/>
 
-      {/* Search Button */}
-      <TouchableOpacity style={styles.searchButton}>
-        <Text style={styles.searchButtonText}>Search</Text>
-      </TouchableOpacity>
     </ScrollView>
   );
 };
 
+export default SearchCriteria;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
-    padding: 16,
+    backgroundColor: "#fff",
+    width: "100%",
   },
-  header: {
+  heading: {
     fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 16,
-    color: '#333',
+    color: "#000",
+    fontWeight: "500",
+    paddingHorizontal: 15,
+    paddingVertical: 15,
   },
   section: {
-    marginBottom: 20,
-    backgroundColor: '#f9f9f9',
+    padding: 10,
     borderRadius: 8,
-    padding: 16,
+    marginBottom: 15,
   },
   sectionTitle: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    marginBottom: 12,
-    color: '#333',
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#000",
+    width: "100%",
+    marginBottom: 10,
+    backgroundColor: "#f8f8f8",
+    paddingHorizontal: 10,
+    paddingVertical: 8,
   },
   row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginVertical: 8,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ddd",
+    backgroundColor: "#fff",
+  },
+  rowRight: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   label: {
     fontSize: 14,
-    color: '#666',
+    color: "#555",
   },
   value: {
     fontSize: 14,
-    fontWeight: '600',
-    color: '#333',
+    color: "#000",
+    marginRight: 5,
+  },
+  valueWithLink: {
+    flexDirection: "row",
+    fontSize: 14,
+    color: "#000",
+    marginRight: 5,
+  },
+  readMore: {
+    color: "#f47216",
+    textDecorationLine: "underline",
   },
   viewMore: {
-    marginTop: 10,
     fontSize: 14,
-    color: '#007bff',
-    textAlign: 'right',
-  },
-  lockedRow: {
+    color: "#f47216",
     marginTop: 10,
-    flexDirection: 'row',
-    alignItems: 'center',
+    fontWeight: "500",
+    paddingHorizontal: 10,
+    backgroundColor: "#fff",
+  },
+  lockedSection: {
+    alignItems: "center",
+    padding: 15,
+    borderTopWidth: 1,
+    borderColor: "#ddd",
+    flexDirection: "row",
+    justifyContent: "center",
   },
   lockedText: {
     fontSize: 14,
-    color: '#555',
+    color: "#555",
+    marginLeft: 10,
   },
-  upgrade: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#ff4500',
-  },
-  matchesText: {
-    fontSize: 14,
-    color: '#666',
-    textAlign: 'center',
-    marginVertical: 12,
-  },
-  searchButton: {
-    backgroundColor: '#ff4500',
-    paddingVertical: 12,
-    borderRadius: 6,
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  searchButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+  upgradeLink: {
+    color: "#f47216",
+    fontWeight: "600",
   },
 });
-
-export default SearchCriteria;

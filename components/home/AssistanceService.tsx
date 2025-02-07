@@ -5,10 +5,10 @@ const AssistedService = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        {/* <Image 
-          source={require('../assets/logo.png')} // You'll need to add your logo image
+        <Image 
+          source={require('../../assets/images/assisted-logo.png')} // You'll need to add your logo image
           style={styles.logo} 
-        /> */}
+        />
         <View style={styles.headerText}>
           <Text style={styles.title}>Assisted Service</Text>
           <Text style={styles.subtitle}>Personalised matchmaking service</Text>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 30,
+    marginBottom: 20,
   },
   logo: {
     width: 50,
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     lineHeight: 28,
   },
   benefitsList: {
-    marginBottom: 30,
+    marginBottom: 20,
   },
   benefitItem: {
     flexDirection: 'row',
@@ -150,8 +150,8 @@ const styles = StyleSheet.create({
   knowMoreButton: {
     backgroundColor: '#E65D11',
     borderRadius: 25,
-    paddingVertical: 15,
-    paddingHorizontal: 30,
+    paddingVertical: 10,
+    paddingHorizontal: 50,
     alignSelf: 'flex-start',
   },
   buttonText: {

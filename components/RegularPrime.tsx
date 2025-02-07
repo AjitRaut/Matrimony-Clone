@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
   membershipContainer: {
     paddingTop: 25,
     alignItems: "center",
+    marginBottom: 15,
   },
   toggleContainer: {
     flexDirection: "row",

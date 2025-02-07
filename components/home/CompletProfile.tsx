@@ -20,7 +20,7 @@ interface TabData {
 }
 
 const CompleteProfile: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<number>(2);
+  const [activeTab, setActiveTab] = useState<number>(0);
 
   const tabs: string[] = [
     "Add Photo",
@@ -195,11 +195,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     padding: 16,
   },
   title: {
-    fontSize: 18,
+    fontSize: 13,
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 8,
@@ -212,9 +212,9 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#ff6f00",
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 8,
+    paddingVertical: 9,
+    paddingHorizontal: 13,
+    borderRadius: 5,
   },
   buttonText: {
     color: "#fff",

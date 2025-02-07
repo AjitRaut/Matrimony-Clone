@@ -1,6 +1,5 @@
-// ContactedYou.tsx
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 
 const ContactedYou = () => {
   return (
@@ -11,12 +10,20 @@ const ContactedYou = () => {
           <Text style={styles.settingsText}>Privacy Settings ⚙️</Text>
         </TouchableOpacity>
       </View>
+
       <View style={styles.emptyState}>
+        <Image
+          source={{
+            uri: "https://imgs.bharatmatrimony.com/webapp-assets/revamp-images/mailbox/chat-converstion.png",
+          }}
+          style={styles.image}
+          resizeMode="contain"
+        />
         <Text style={styles.emptyTitle}>
           No Members have attempted to contact you.
         </Text>
         <Text style={styles.emptySubtitle}>
-          Come back later or initiate new conversations with matches online
+          Come back later or initiate new conversations with matches online.
         </Text>
       </View>
     </View>
@@ -25,30 +32,31 @@ const ContactedYou = () => {
 
 export default ContactedYou;
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
+    backgroundColor: "#F9F9F9",
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "#E8E8E8",
+    paddingVertical: 10,
+    paddingHorizontal: 12,
   },
   title: {
-    fontSize: 16,
-    fontWeight: "500",
+    fontSize: 14,
+    fontWeight: "bold",
     color: "#333",
   },
   settingsButton: {
     padding: 8,
+    borderRadius: 5,
   },
   settingsText: {
-    fontSize: 14,
-    color: "#666",
+    fontSize: 12,
+    color: "#333",
+    fontWeight: "500",
   },
   emptyState: {
     flex: 1,
@@ -56,15 +64,22 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 24,
   },
+  image: {
+    width: 180,
+    height: 180,
+    marginBottom: 20,
+  },
   emptyTitle: {
-    fontSize: 16,
-    color: "#333",
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#444",
     textAlign: "center",
-    marginBottom: 8,
+    marginBottom: 12,
   },
   emptySubtitle: {
-    fontSize: 14,
+    fontSize: 15,
     color: "#666",
     textAlign: "center",
+    lineHeight: 22,
   },
 });

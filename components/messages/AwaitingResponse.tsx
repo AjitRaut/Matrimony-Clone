@@ -1,26 +1,40 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
 
-const AwaitingResponseScreen = () => {
+const AwaitingResponse = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Awaiting Response Content</Text>
+      <Image
+        source={{
+          uri: "https://imgs.bharatmatrimony.com/webapp-assets/revamp-images/mailbox/chat-converstion.png",
+        }}
+        style={styles.image}
+        resizeMode="contain"
+      />
+      <Text style={styles.text}>You have no conservations till now </Text>
     </View>
   );
 };
 
-export default AwaitingResponseScreen;
+export default AwaitingResponse;
 
-
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#f9f9f9", 
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  image: {
+    width: 200, 
+    height: 200,
+    marginBottom: 20, 
   },
   text: {
-    fontSize: 16,
-    color: '#666',
+    fontSize: 18, 
+    fontWeight: "500", 
+    color: "#444", 
+    textAlign: "center", 
   },
 });

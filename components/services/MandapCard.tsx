@@ -2,47 +2,40 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { FontAwesome5, MaterialIcons } from "@expo/vector-icons";
 
-const EliteMatrimonyCard: React.FC = () => {
+const MandapCard: React.FC = () => {
   return (
     <View style={styles.card}>
       <View style={styles.header}>
         <Text style={styles.logo}>
-          <Text style={{ fontWeight: "bold", fontSize: 20, color: "#A10A31" }}>
-            Elite
-          </Text>
-          Matrimony
+          <Text style={{ color: "#FF5A5F", fontWeight: "bold" }}>mandap</Text>
+          .com
         </Text>
-        <Text style={styles.subText}>
-          The largest & most successful matrimony service for elite
+        <Text style={styles.subText}>from Matrimony.com group</Text>
+      </View>
+
+      <Text style={styles.title}>
+        India's Largest wedding venue Booking Platform
+      </Text>
+
+      <View style={styles.listItem}>
+        <FontAwesome5 name="headphones" size={16} color="#FF5A5F" />
+        <Text style={styles.listText}>
+          <Text style={styles.boldText}>Free assistance</Text> in finding your
+          venue
         </Text>
       </View>
 
       <View style={styles.listItem}>
-        <FontAwesome5 name="users" size={16} color="#A10A31" />
+        <MaterialIcons name="verified-user" size={16} color="#FF5A5F" />
         <Text style={styles.listText}>
-          <Text style={styles.boldText}>Served over 50,000</Text> Elite
-          customers
+          <Text style={styles.boldText}>100% verified</Text> venues
         </Text>
       </View>
 
       <View style={styles.listItem}>
-        <MaterialIcons name="verified" size={16} color="#A10A31" />
+        <FontAwesome5 name="building" size={16} color="#FF5A5F" />
         <Text style={styles.listText}>
-          <Text style={styles.boldText}>Exclusive base</Text> of elite members
-        </Text>
-      </View>
-
-      <View style={styles.listItem}>
-        <FontAwesome5 name="lock" size={16} color="#A10A31" />
-        <Text style={styles.listText}>
-          <Text style={styles.boldText}>100% confidential</Text> service
-        </Text>
-      </View>
-
-      <View style={styles.listItem}>
-        <FontAwesome5 name="headphones" size={16} color="#A10A31" />
-        <Text style={styles.listText}>
-          <Text style={styles.boldText}>Dedicated relationship manager</Text>
+          <Text style={styles.boldText}>40,000+</Text> venues
         </Text>
       </View>
 
@@ -71,12 +64,17 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#A10A31",
+    color: "#FF5A5F",
   },
   subText: {
     fontSize: 12,
-    color: "#555",
-    marginVertical: 4,
+    color: "#999",
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#333",
+    marginVertical: 8,
   },
   listItem: {
     flexDirection: "row",
@@ -93,7 +91,7 @@ const styles = StyleSheet.create({
     color: "#000",
   },
   button: {
-    backgroundColor: "#FF7B5A",
+    backgroundColor: "#FF5A5F",
     paddingVertical: 12,
     borderRadius: 4,
     alignItems: "center",
@@ -106,4 +104,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EliteMatrimonyCard;
+export default MandapCard;
